@@ -1,0 +1,18 @@
+﻿@using EFCodeFirst_Entegrasyonu.Models
+@model IEnumerable<Kisiler>
+@{
+    ViewBag.Title = "homePage";
+}
+
+<h2>HomePage</h2>
+
+    <ul>
+
+        @foreach (var kisi in Model)
+        {                                                                                                                   
+            <li>
+                @(kisi.Ad+" "+kisi.Soyad)
+            </li>
+
+        }
+    </ul>
