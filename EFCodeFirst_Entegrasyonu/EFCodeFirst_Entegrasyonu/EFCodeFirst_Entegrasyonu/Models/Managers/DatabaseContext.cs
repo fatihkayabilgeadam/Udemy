@@ -11,7 +11,7 @@ namespace EFCodeFirst_Entegrasyonu.Models.Managers
         public DbSet<Kisiler> Kisiler { get; set; }
         public DbSet<Adresler> Adresler { get; set; }
 
-        public DatabaseContext()
+        public DatabaseContext() : base("name=DataContext") // base("name=DataContext") eklendi bunu eklememizde ki amaç database e nereden bağlanacağımızı göstermektir.
         {
             Database.SetInitializer(new VeritabaniOlusturucu());
         }
